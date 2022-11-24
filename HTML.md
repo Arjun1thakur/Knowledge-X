@@ -9,4 +9,5 @@ HTML was first created by Tim Berners-Lee, Robert Cailliau, and others starting 
 
 ## Q2. What is the HTML head?
 `The <head> element contains meta information about the HTML page`
+
 The HTML head is the contents of the <head> element. Unlike the contents of the <body> element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain metadata about the document
