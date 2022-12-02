@@ -50,7 +50,7 @@
 ## ***Q8. What is the Tags?***
 *An HTML tag surrounds the content and apply meaning to it. It is written between < and > brackets.*
 ## ***Q9. What is the Attribute?***
-*An attribute in HTML provides extra information about the element, and it is applied within the start tag. An HTML attribute contains two fields: name & value.*![Alt text](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png)
+*An attribute in HTML provides extra information about the element, and it is applied within the start tag. An HTML attribute contains two fields: name `&` value.*![Alt text](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png)
 ## ***Q10. What is the Elements?***
 *An HTML element is an individual component of an HTML file. In an HTML file, everything written within tags are termed as HTML elements.*
 ![element example](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png)
@@ -58,13 +58,16 @@
 # ***Important***
 *Note: Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a `<title>` tag could be written as `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.*
 
-## ***Q11. Block and inline boxes?***
-*In HTML we broadly have two types of boxes — block boxes and inline boxes. The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes have an inner display type and an outer display type.*
+## ***Q11. Block versus inline elements.***
+*There are two important categories of elements to know in HTML: block-level elements and inline elements.*
+* *Block-level elements form a visible block on a page. A block-level element appears on a new line following the content that precedes it. Any content that follows a block-level element also appears on a new line. Block-level elements are usually structural elements on the page. For example, a block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.*
+* Inline elements are contained within block-level elements, and surround only small parts of the document's content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear in the document. It is typically used with text, for example an `<a>` element creates a hyperlink, and elements such as `<em>` or `<strong>` create emphasis.*
 
-***Outer display type***
-* *The box will break onto a new line.*
-* *The width and height properties are respected.*
-* *Padding, margin and border will cause other elements to be pushed away from the box.*
-* *The box will extend in the inline direction to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available.*
+## ***Q12. Void elements?***
+*Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. Such elements are called void elements. For example, the `<img>` element embeds an image file onto a page:*
 
-*Some HTML elements, such as `<h1>` and `<p>`, use block as their outer display type by default.*
+# ***Important***
+*Note: In HTML, there is no requirement to add a / at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.*
+
+##  ***Q13. Boolean attributes?***
+*Sometimes you will see attributes written without values. This is entirely acceptable. These are called Boolean attributes. Boolean attributes can only have one value, which is generally the same as the attribute name. For example, consider the disabled attribute, which you can assign to form input elements. (You use this to disable the form input elements so the user can't make entries. The disabled elements typically have a grayed-out appearance.)*
