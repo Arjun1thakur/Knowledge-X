@@ -288,5 +288,196 @@ const status = age >= 18 ? 'adult' : 'minor';
 * *`==`:- Returns `true` if operands have the same data type and same value, returns `false` if the values differ and also known as loose equality.Follows abstract equality comparison algorithm.*
 * *`===`:- The `===` operators follow Strictly equality comparison algorithm, i.e., it doesn't do the type conversion of the operands before comparing their values and returns false even if the data type of the operands aren't the same.*
 
-### *Q10. What is if / else if / else Statement and why we use it?*
+### *Q11. What is if / else if / else Statement and why we use it?*
+*The `if...else` statement executes a statement if a specified condition is truthy. If the condition is falsy, another statement in the optional `else` clause will be executed.*
+
+```javascript
+if (condition)
+  statement1
+
+// With an else clause
+if (condition)
+  statement1
+else
+  statement2
+```
+***condition***
+*An expression that is considered to be either truthy or falsy.*
+
+***statement1***
+*Statement that is executed if condition is truthy. Can be any statement, including further nested if statements. To execute multiple statements, use a block statement ({ /* ... */ }) to group those statements. To execute no statements, use an empty statement.*
+
+***statement2***
+*Statement that is executed if condition is falsy and the else clause exists. Can be any statement, including block statements and further nested if statements.*
+
+***Note:- There is no elseif syntax in JavaScript. However, you can write it with a space between else and if. Multiple if...else statements can be nested to create an else if clause***
+
 *You can combine as many logic operations as you want into one if statement using any of the javascript logic and comparision operators.*
+
+### *Q12. What is Switch Statement in JavaScript?*
+*The switch statement evaluates an expression, matching the expression's value against a series of case clauses, and executes statements after the first case clause with a matching value, until a break statement is encountered. The default clause of a switch statement will be jumped to if no case matches the expression's value.*
+
+```javascript
+const expr = 'Papayas';
+switch (expr) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+    break;
+  case 'Mangoes':
+  case 'Papayas':
+    console.log('Mangoes and papayas are $2.79 a pound.');
+    // expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+```
+
+### *Q13. What is Loops & their types?*
+*Loops are handy, if you want to run the same code over and over again, each time with a different value.*
+***Instead of writing:***
+```javascript
+text += cars[0] + "<br>";
+text += cars[1] + "<br>";
+text += cars[2] + "<br>";
+text += cars[3] + "<br>";
+text += cars[4] + "<br>";
+text += cars[5] + "<br>";
+```
+***You can write:***
+```javascript
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+```
+### ***Different Kinds of Loops***
+* *`for` - loops through a block of code a number of times*
+* *`for/in` - loops through the properties of an object*
+* *`for/of` - loops through the values of an iterable object*
+* *`while` - loops through a block of code while a specified condition is true*
+* *`do/while` - also loops through a block of code while a specified condition is true*
+
+### ***For Loop***
+*The for statement creates a loop with 3 optional expressions:* 
+```javascript
+for (expression 1; expression 2; expression 3) {
+  // code block to be executed
+}
+or
+for(initializer;condition;iteration){
+  // code block to be executed
+}
+```
+****Expression 1*** is executed (one time) before the execution of the code block.*
+
+****Expression 2*** defines the condition for executing the code block.*
+
+***Expression 3*** is executed (every time) after the code block has been executed.*
+
+### ***While Loop***
+*The `while` statement creates a loop that executes a specified statement as long as the test condition evaluates to true.*
+***Syntax***
+```javascript
+while (condition)
+  statement
+```
+***Example***
+```javascrip
+let n = 0;                    // Value declaration
+
+while (n < 3) {             //  (n < 3 ) -> condition
+  console.log("hello")
+  n++;                     //   (n++) -> Statement
+}
+
+console.log(n);
+```
+### ***do...while***
+*The `do...while` statement creates a loop that executes a specified statement until the test condition evaluates to false. The condition is evaluated after executing the statement, resulting in the specified statement executing at least once.*
+***Syntax***
+```javascript
+do
+  statement
+while (condition)
+
+```
+***Example***
+```javascrip
+let result = '';
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i > 5);
+
+console.log(result);
+// expected result: "1"
+```
+***Check Difference*** in upper code & bottom code
+```javascrip
+let result = '';
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// expected result: "12345"
+```
+
+### *Q14. What is function?*
+*A JavaScript function is a block of code designed to perform a particular task.*
+*A function is a group of reusable code which can be called anywhere in your program. This eliminates the need of writing the same code again and again.*
+
+***function Definition***
+*Before we use a function, we need to define it.*
+*A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:*
+* *The name of the function.*
+* *A list of parameters to the function, enclosed in parentheses and separated by commas.*
+* *The JavaScript statements that define the function, enclosed in curly brackets, {...}.*
+```javascript
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+```
+
+***Calling functions***
+* *Defining a function does not execute it.*
+* *A JavaScript function is executed when "something" invokes it (calls it).*
+
+***Function Parameter***
+*Function parameters are the names listed in the function's definition.*
+
+***Function Arguments***
+*Function arguments are the real values passed to the function.*
+
+***Function expressions***
+*" Function expressions simply means create a function and put it into the variable "*
+
+***Return Keyword***
+*When JavaScript reaches a return statement, the function will stop executing.*
+*Functions often compute a return value. The return value is "returned" back to the "caller".*
+
+***Anonymous Function***
+*A function expression is similar to and has the same syntax as a function declaration One can define "named" function expressions (where the name of the expression  might be used in the call stack for example) or "anonymous" function expressions.*
+
+```javascript
+function func(a=7,b=9){   //(a,b)->Function Parameter
+  let sum=a+b;
+  return sum;      //return sum value to our function 
+}
+console.log(func(3,6));     //(3,6)->Function Arguments
+console.log(func());  //func()->Function call value already defined in function.
+let value=func(2,10);   // Function expressions
+console.log(value)
+
+//Anonymous Function
+const sum=function(a,b){
+  return a+b;
+}
+console.log(sum(3,10))
+```
+
